@@ -1,4 +1,4 @@
-import messages from './../messages';
+import messages from './../constants/messages';
 
 const HelpHandler = {
     canHandle(handlerInput) {

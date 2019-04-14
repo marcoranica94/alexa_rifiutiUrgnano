@@ -1,4 +1,4 @@
-import { STOP } from './../messages';
+import { STOP } from './../constants/messages';
 
 const ExitHandler = {
     canHandle(handlerInput) {

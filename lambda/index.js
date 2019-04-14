@@ -1,13 +1,13 @@
-const Alexa = require('ask-sdk-core');
-const handlers = require('./libs/handlers');
+import { SkillBuilders } from 'ask-sdk-core';
+import { request, error } from './libs/handlers';
 
-const skillBuilder = Alexa.SkillBuilders.standard();
+const skillBuilder = SkillBuilders.standard();
 
-exports.handler = skillBuilder
+export const handler = skillBuilder
     .addRequestHandlers(
-        ...handlers.request,
+        ...request,
     )
     .addErrorHandlers(
-        ...handlers.error,
+        ...error,
     )
     .lambda();

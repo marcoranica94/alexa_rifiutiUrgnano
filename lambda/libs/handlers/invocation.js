@@ -1,4 +1,4 @@
-import messages from './../messages';
+import messages from './../constants/messages';
 import moment from 'moment';
 
 const LaunchRequestHandler = {

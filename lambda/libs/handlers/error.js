@@ -1,4 +1,4 @@
-import { ERROR } from './../messages';
+import { ERROR } from './../constants/messages';
 
 const ErrorHandler = {
     canHandle() {
