@@ -3,4 +3,4 @@ const messages = {
     STOP: 'Ciao, alla prossima!',
 };
 
-module.exports = messages;
+export default messages;
