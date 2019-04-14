@@ -1,4 +1,4 @@
-const messages = require('./../messages');
+import { ERROR } from './../messages';
 
 const ErrorHandler = {
     canHandle() {
@@ -8,10 +8,10 @@ const ErrorHandler = {
         console.log(`Error handled: ${error.message}`);
 
         return handlerInput.responseBuilder
-            .speak(messages.ERROR)
+            .speak(ERROR)
             .reprompt('Sorry, an error occurred.')
             .getResponse();
     },
 };
 
-module.exports = ErrorHandler;
+export default ErrorHandler;

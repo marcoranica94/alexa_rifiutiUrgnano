@@ -1,4 +1,4 @@
-const messages = require('./../messages');
+import messages from './../messages';
 
 const HelpHandler = {
     canHandle(handlerInput) {
@@ -14,4 +14,4 @@ const HelpHandler = {
     },
 };
 
-module.exports = HelpHandler;
+export default HelpHandler;

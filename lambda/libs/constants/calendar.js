@@ -1,4 +1,4 @@
-const rifiuti = require('./rifiuti').default;
+import rifiuti from './rifiuti';
 
 const calendar = new Map();
 
@@ -231,4 +231,4 @@ calendar.set("26/12/2019", [rifiuti.CAR]);
 calendar.set("27/12/2019", [rifiuti.PLA, rifiuti.SEC]);
 calendar.set("30/12/2019", [rifiuti.ORG]);
 
-module.exports = calendar;
+export default calendar;

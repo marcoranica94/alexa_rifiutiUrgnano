@@ -1,4 +1,5 @@
-const messages = require('./../messages');
+import messages from './../messages';
+import moment from 'moment';
 
 const LaunchRequestHandler = {
     canHandle(handlerInput) {
@@ -13,4 +14,4 @@ const LaunchRequestHandler = {
     }
 };
 
-module.exports = InvocationHandler;
+export default InvocationHandler;
