@@ -1,4 +1,4 @@
-import { ERROR } from './../constants/messages';
+//import { ERROR } from './../constants/messages';
 
 const ErrorHandler = {
     canHandle() {
@@ -8,10 +8,10 @@ const ErrorHandler = {
         console.log(`Error handled: ${error.message}`);
 
         return handlerInput.responseBuilder
-            .speak(ERROR)
+            .speak("ERROR")
             .reprompt('Sorry, an error occurred.')
             .getResponse();
     },
 };
 
-export default ErrorHandler;
+module.exports = ErrorHandler;

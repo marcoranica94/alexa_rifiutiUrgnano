@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "rifiuti-urgnano",
   "version": "0.9.0",
   "description": "alexa utility for quickly building skills",
   "main": "index.js",
@@ -12,6 +12,7 @@
     "ask-sdk-core": "^2.0.7",
     "ask-sdk-model": "^1.4.1",
     "aws-sdk": "^2.326.0",
+    "ask-sdk": "~2.0.0",
     "moment": "2.24.0"
   }
 }

@@ -1,7 +1,4 @@
-import messages from './../constants/messages';
-import moment from 'moment';
-
-const LaunchRequestHandler = {
+const InvocationHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
@@ -14,4 +11,4 @@ const LaunchRequestHandler = {
     }
 };
 
-export default InvocationHandler;
+module.exports = InvocationHandler;

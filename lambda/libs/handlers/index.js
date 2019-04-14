@@ -1,15 +1,17 @@
-import InvocationHandler from './invocation';
-import ErrorHandler from './error';
-import ExitHandler from './exit';
-import HelpHandler from './help';
-import SessionEndedHandler from './sessionEnded';
+const InvocationHandler = require('./invocation');
+const HelpHandler = require('./help');
+const ExitHandler = require('./exit');
+const ErrorHandler = require('./error');
+const SessionEndedHandler = require('./sessionEnded');
 
-export const error = [
-    ErrorHandler,
-];
-export const request = [
-    InvocationHandler,
-    ExitHandler,
-    HelpHandler,
-    SessionEndedHandler,
-];
+module.exports = {
+    error: [
+        ErrorHandler,
+    ],
+    request: [
+        InvocationHandler,
+        HelpHandler,
+        ExitHandler,
+        SessionEndedHandler,
+    ],
+};

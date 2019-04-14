@@ -1,4 +1,4 @@
-import { STOP } from './../constants/messages';
+//import { STOP } from './../constants/messages';
 
 const ExitHandler = {
     canHandle(handlerInput) {
@@ -9,9 +9,9 @@ const ExitHandler = {
     },
     handle(handlerInput) {
         return handlerInput.responseBuilder
-            .speak(STOP)
+            .speak("STOP")
             .getResponse();
     },
 };
 
-export default ExitHandler;
+module.exports = ExitHandler;

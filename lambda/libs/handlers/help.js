@@ -1,5 +1,3 @@
-import messages from './../constants/messages';
-
 const HelpHandler = {
     canHandle(handlerInput) {
         const request = handlerInput.requestEnvelope.request;
@@ -14,4 +12,4 @@ const HelpHandler = {
     },
 };
 
-export default HelpHandler;
+module.exports = HelpHandler;
