@@ -6,7 +6,7 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "76fafeb8b086437f0dcf14a52e4cbd4f"
+          "eTag": "0c252f387b0c13688a9e2ff44655d3da"
         },
         "interactionModel": {
           "it-IT": {
@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "rifiutiUrgnano",
             "handler": "index.handler",
-            "revisionId": "7bbd7e14-bb46-434a-aa1e-67966204afaa",
+            "revisionId": "f8997af2-5b7f-466e-8e27-4dcfd8709a6d",
             "runtime": "nodejs8.10"
           }
         ]
