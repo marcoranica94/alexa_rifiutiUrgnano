@@ -1,0 +1,22 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "it-IT": {
+          "name": "rifiutiUrgnano",
+          "description": "Gestione rifiuti di Urgnano"
+        }
+      },
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom",
+          "uri": "rifiutiUrgnano"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
