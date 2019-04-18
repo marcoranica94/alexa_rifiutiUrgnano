@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "rifiutiUrgnano",
             "handler": "index.handler",
-            "revisionId": "f8997af2-5b7f-466e-8e27-4dcfd8709a6d",
+            "revisionId": "1d68ed81-0145-4140-8008-3f09112a75ba",
             "runtime": "nodejs8.10"
           }
         ]
