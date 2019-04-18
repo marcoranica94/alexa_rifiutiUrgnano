@@ -1,0 +1,33 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.945dfa24-5c91-45a7-8cdc-c46e09bb6c2e",
+      "was_cloned": false,
+      "merge": {},
+      "resources": {
+        "manifest": {
+          "eTag": "76fafeb8b086437f0dcf14a52e4cbd4f"
+        },
+        "interactionModel": {
+          "it-IT": {
+            "eTag": "1893c1b680970a5def5a3b232b8d77eb"
+          }
+        },
+        "lambda": [
+          {
+            "alexaUsage": [
+              "custom/default"
+            ],
+            "arn": "arn:aws:lambda:eu-west-1:822276630470:function:rifiutiUrgnano",
+            "awsRegion": "eu-west-1",
+            "codeUri": "lambda/custom",
+            "functionName": "rifiutiUrgnano",
+            "handler": "index.handler",
+            "revisionId": "7bbd7e14-bb46-434a-aa1e-67966204afaa",
+            "runtime": "nodejs8.10"
+          }
+        ]
+      }
+    }
+  }
+}
