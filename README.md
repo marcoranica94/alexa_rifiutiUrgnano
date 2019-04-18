@@ -1,13 +1,23 @@
-# Build An Alexa Hello World Skill
+# Build An Alexa Rifiuti Skill
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
+
+
+## How i created a alexa Skill
+
+I installed aws-cli from https://developer.amazon.com/it/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html
+1) launch ask init to connect my pc - aws/alexa console
+2) launch ask new and set the name
+3) launch ask deploy and now there are 
+    - Json in AlexaConsole 
+    - Dode in AWS 
 
 ### This is a simple tutorial to introduce a simple Alexa skill and code.
 
 ## Skill Architecture
-Each skill consists of two basic parts, a front end and a back end.
-The front end is the voice interface, or VUI.
-The voice interface is configured through the voice interaction model.
-The back end is where the logic of your skill resides.
+
+
+
+
 
 ## Three Options for Skill Setup
 There are a number of different ways for you to setup your skill, depending on your experience and what tools you have available.
