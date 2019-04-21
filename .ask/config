@@ -10,7 +10,7 @@
         },
         "interactionModel": {
           "it-IT": {
-            "eTag": "1893c1b680970a5def5a3b232b8d77eb"
+            "eTag": "2b123574e19f44a38ff80c5d148ead10"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "rifiutiUrgnano",
             "handler": "index.handler",
-            "revisionId": "1d68ed81-0145-4140-8008-3f09112a75ba",
+            "revisionId": "e5f81202-f852-4cc4-b835-5bf99bc934e0",
             "runtime": "nodejs8.10"
           }
         ]

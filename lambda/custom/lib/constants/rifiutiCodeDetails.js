@@ -1,4 +1,3 @@
-
 const rifiutiCodeDetails = {
   SEC: "Secco",
   ORG: "Organico",
