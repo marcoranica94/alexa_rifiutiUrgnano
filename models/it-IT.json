@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "rifiuti urgnano",
+      "invocationName": "gestione urgnano",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -21,7 +21,6 @@
           "samples": [
             "cosa faccio oggi",
             "oggi",
-            "rifiuti di oggi",
             "cosa butto oggi"
           ]
         },
@@ -32,5 +31,6 @@
       ],
       "types": []
     }
-  }
+  },
+  "version": "3"
 }
