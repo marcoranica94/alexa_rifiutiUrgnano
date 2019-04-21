@@ -1,14 +1,29 @@
+const messages = require('./../constants/messages');
+const dateMethods = require('./../method/dateMethods');
+const trashMethods = require('./../method/trashMethods');
+
 const InvocationHandler = {
     canHandle(handlerInput) {
-        return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
+        const request = handlerInput.requestEnvelope.request;
+        return request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speechText = 'Ciao cittadino, cosa desideri sapere?';
+        const today = dateMethods.getNowDate();
+        const listCodesTrash = dateMethods.getRifiutidelGiorno('27/09/2019');
+        const dateToSpeech = dateMethods.getFormatForSpeech(today);
+
+        let SPEECH = "";
+        if (listCodesTrash.size === 0) {
+            SPEECH = messages.NO_RIFIUTI + dateToSpeech;
+        } else {
+            const trashToSpeech = trashMethods.getListOfTrash(listCodesTrash);
+            SPEECH = messages.RIFIUTI + dateToSpeech + " sono: " + trashToSpeech + ". " + messages.MORE_INFO;
+        }
         return handlerInput.responseBuilder
-            .speak(speechText)
-            .reprompt(speechText)
+            .speak(SPEECH)
+            .withShouldEndSession(false)
             .getResponse();
-    }
+    },
 };
 
 module.exports = InvocationHandler;

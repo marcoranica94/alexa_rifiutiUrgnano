@@ -1,4 +1,4 @@
-//import { STOP } from './../constants/messages';
+const message = require('./../constants/messages');
 
 const ExitHandler = {
     canHandle(handlerInput) {
@@ -9,7 +9,7 @@ const ExitHandler = {
     },
     handle(handlerInput) {
         return handlerInput.responseBuilder
-            .speak("STOP")
+            .speak(message.STOP)
             .getResponse();
     },
 };
