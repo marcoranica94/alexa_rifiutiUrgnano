@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "gestione urgnano",
+      "invocationName": "rifiuti urgnano",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",

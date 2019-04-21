@@ -9,7 +9,7 @@ const InvocationHandler = {
     },
     handle(handlerInput) {
         const today = dateMethods.getNowDate();
-        const listCodesTrash = dateMethods.getRifiutidelGiorno('27/09/2019');
+        const listCodesTrash = dateMethods.getRifiutidelGiorno(today);
         const dateToSpeech = dateMethods.getFormatForSpeech(today);
 
         let SPEECH = "";
