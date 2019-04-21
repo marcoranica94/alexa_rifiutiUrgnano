@@ -1,8 +1,6 @@
-const moment = require('moment');
 const message = require('./../constants/messages');
-const calendar = require('./../constants/calendar');
-const rifiutiCodeDetails = require ('./../constants/rifiutiCodeDetails')
-const { List } = require('immutable');
+const dateMethods = require('./../method/dateMethods');
+const trashMethods = require('./../method/trashMethods');
 
 const InvocationHandler = {
     canHandle(handlerInput) {
@@ -12,27 +10,23 @@ const InvocationHandler = {
         return request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        moment.locale('it');
-        console.log("locale :" +moment.locale());
-        const today = moment().format('DD/MM/YYYY');
+        const today = dateMethods.getNowDate();
         console.log("today "+ today);
 
-        const rifiutiGiornalierio = List(calendar.get('19/04/2019'));
-        console.log("rifiutiGiornalierio "+ rifiutiGiornalierio);
-        console.log( "Type rifiuti : " + typeof rifiutiGiornalierio)
-        const longDate = moment().format('LL');
-        console.log("longDate "+ longDate);
+        const listCodesTrash = dateMethods.getRifiutidelGiorno('27/09/2019');
+        console.log("rifiutiGiornalierio "+ listCodesTrash);
+        console.log( "Type rifiuti : " + typeof listCodesTrash)
 
-        const rifiuti = rifiutiGiornalierio.reduce(function(accumulator, currentValue) {
-            return accumulator + " " + rifiutiCodeDetails[currentValue];
-          }, " ");
-        console.log("rifiuti "+ rifiuti);
+        const dateToSpeech = dateMethods.getFormatForSpeech(today);
+        console.log("dateToSpeech "+ dateToSpeech);
 
         let SPEECH = "";
-        if (rifiutiGiornalierio === undefined) {
-            SPEECH = message.NO_RIFIUTI + longDate;
+        if (listCodesTrash.size === 0) {
+            SPEECH = message.NO_RIFIUTI + dateToSpeech;
         } else {
-            SPEECH = message.RIFIUTI + longDate + " sono " + rifiuti;
+            const trashToSpeech = trashMethods.getListOfTrash(listCodesTrash);
+            console.log("rifiuti "+ trashToSpeech);
+            SPEECH = message.RIFIUTI + dateToSpeech + " sono: " + trashToSpeech;
         }
         return handlerInput.responseBuilder
             .speak(SPEECH)
