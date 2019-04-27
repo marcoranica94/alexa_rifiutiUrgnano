@@ -47,7 +47,7 @@
           "name": "Slot_Trash",
           "values": [
             {
-              "id": "6",
+              "id": "IND",
               "name": {
                 "value": "Indumenti usati",
                 "synonyms": [
@@ -57,7 +57,7 @@
               }
             },
             {
-              "id": "5",
+              "id": "VL",
               "name": {
                 "value": "Vetro e Lattine",
                 "synonyms": [
@@ -68,25 +68,25 @@
               }
             },
             {
-              "id": "4",
+              "id": "PLA",
               "name": {
                   "value": "Plastica"
               }
             },
             {
-              "id": "3",
+              "id": "CAR",
               "name": {
                   "value": "Carta"
               }
             },
             {
-              "id": "2",
+              "id": "ORG",
               "name": {
                   "value": "Organico"
               }
             },
             {
-              "id": "1",
+              "id": "SEC",
               "name": {
                   "value": "Secco"
               }
