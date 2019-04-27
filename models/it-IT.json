@@ -32,13 +32,13 @@
           "name": "SpecificTrashIntent",
           "slots": [
               {
-                  "name": "Slot_Trash",
+                  "name": "SlotTrash",
                   "type": "Slot_Trash"
               }
           ],
           "samples": [
-              "quando il {Slot_Trash}",
-              "quando devo portare il {Slot_Trash}"
+              "quando il {SlotTrash}",
+              "quando devo portare il {SlotTrash}"
           ]
         }
       ],
@@ -46,45 +46,51 @@
         {
           "name": "Slot_Trash",
           "values": [
-              {
-                  "name": {
-                      "value": "Indumenti usati",
-                      "synonyms": [
-                          "indumenti",
-                          "vestiti"
-                      ]
-                  }
-              },
-              {
-                  "name": {
-                      "value": "Vetro e Lattine",
-                      "synonyms": [
-                          "barattoli",
-                          "lattine",
-                          "vetro"
-                      ]
-                  }
-              },
-              {
-                  "name": {
-                      "value": "Plastica"
-                  }
-              },
-              {
-                  "name": {
-                      "value": "Carta"
-                  }
-              },
-              {
-                  "name": {
-                      "value": "Organico"
-                  }
-              },
-              {
-                  "name": {
-                      "value": "Secco"
-                  }
+            {
+              "id": "6",
+              "name": {
+                "value": "Indumenti usati",
+                "synonyms": [
+                    "indumenti",
+                    "vestiti"
+                ]
               }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "Vetro e Lattine",
+                "synonyms": [
+                    "barattoli",
+                    "lattine",
+                    "vetro"
+                ]
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                  "value": "Plastica"
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                  "value": "Carta"
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                  "value": "Organico"
+              }
+            },
+            {
+              "id": "1",
+              "name": {
+                  "value": "Secco"
+              }
+            }
           ]
         }
       ]
