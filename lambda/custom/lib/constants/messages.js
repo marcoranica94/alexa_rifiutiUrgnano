@@ -4,7 +4,9 @@ const messages = {
     MORE_INFO : 'Cittadino, desidera sapere altro?',
     NO_RIFIUTI : 'Non è previsto il ritiro dei rifiuti oggi, il ',
     RIFIUTI : 'I rifiuti che verranno ritirati il ',
-    UNKNOWN_TRASH: 'Non conosco questo rifiuto'
+    UNKNOWN_TRASH: 'Non conosco questo rifiuto',
+    NO_RIFIUTI_YEAR: 'Non è previsto il ritiro quest anno',
+    SPECIFIC_TRASH: (firstTrash, day) => firstTrash + ' verrà ritirato il ' + day
 };
 
 module.exports = messages;
