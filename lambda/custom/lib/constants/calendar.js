@@ -1,234 +1,236 @@
+const { OrderedMap } = require('immutable');
 const rifiutiCode = require('./rifiutiCode');
 
-const calendar = new Map();
+const calendar = new OrderedMap({
 
 /* GENNAIO */
-calendar.set("02/01/2019", [rifiutiCode.IND]);
-calendar.set("03/01/2019", [rifiutiCode.CAR]);
-calendar.set("04/01/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("07/01/2019", [rifiutiCode.ORG]);
-calendar.set("09/01/2019", [rifiutiCode.VL]);
-calendar.set("10/01/2019", [rifiutiCode.CAR]);
-calendar.set("11/01/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("14/01/2019", [rifiutiCode.ORG]);
-calendar.set("17/01/2019", [rifiutiCode.CAR]);
-calendar.set("18/01/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("21/01/2019", [rifiutiCode.ORG]);
-calendar.set("23/01/2019", [rifiutiCode.VL]);
-calendar.set("24/01/2019", [rifiutiCode.CAR]);
-calendar.set("25/01/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("28/01/2019", [rifiutiCode.ORG]);
-calendar.set("31/01/2019", [rifiutiCode.CAR]);
+    "02/01/2019" : [rifiutiCode.IND],
+    "03/01/2019" : [rifiutiCode.CAR],
+    "04/01/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "07/01/2019" : [rifiutiCode.ORG],
+    "09/01/2019" : [rifiutiCode.VL],
+    "10/01/2019" : [rifiutiCode.CAR],
+    "11/01/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "14/01/2019" : [rifiutiCode.ORG],
+    "17/01/2019" : [rifiutiCode.CAR],
+    "18/01/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "21/01/2019" : [rifiutiCode.ORG],
+    "23/01/2019" : [rifiutiCode.VL],
+    "24/01/2019" : [rifiutiCode.CAR],
+    "25/01/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "28/01/2019" : [rifiutiCode.ORG],
+    "31/01/2019" : [rifiutiCode.CAR],
 
-/* FEBBARIO */
+    /* FEBBARIO */
 
-calendar.set("01/02/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("04/02/2019", [rifiutiCode.ORG]);
-calendar.set("05/02/2019", [rifiutiCode.IND]);
-calendar.set("06/02/2019", [rifiutiCode.VL]);
-calendar.set("07/02/2019", [rifiutiCode.CAR]);
-calendar.set("08/02/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("11/02/2019", [rifiutiCode.ORG]);
-calendar.set("14/02/2019", [rifiutiCode.CAR]);
-calendar.set("15/02/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("18/02/2019", [rifiutiCode.ORG]);
-calendar.set("20/02/2019", [rifiutiCode.VL]);
-calendar.set("21/02/2019", [rifiutiCode.CAR]);
-calendar.set("22/02/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("25/02/2019", [rifiutiCode.ORG]);
-calendar.set("28/02/2019", [rifiutiCode.CAR]);
+    "01/02/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "04/02/2019" : [rifiutiCode.ORG],
+    "05/02/2019" : [rifiutiCode.IND],
+    "06/02/2019" : [rifiutiCode.VL],
+    "07/02/2019" : [rifiutiCode.CAR],
+    "08/02/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "11/02/2019" : [rifiutiCode.ORG],
+    "14/02/2019" : [rifiutiCode.CAR],
+    "15/02/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "18/02/2019" : [rifiutiCode.ORG],
+    "20/02/2019" : [rifiutiCode.VL],
+    "21/02/2019" : [rifiutiCode.CAR],
+    "22/02/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "25/02/2019" : [rifiutiCode.ORG],
+    "28/02/2019" : [rifiutiCode.CAR],
 
-/* MARZO */
+    /* MARZO */
 
-calendar.set("01/03/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("04/03/2019", [rifiutiCode.ORG]);
-calendar.set("05/03/2019", [rifiutiCode.IND]);
-calendar.set("06/03/2019", [rifiutiCode.VL]);
-calendar.set("07/03/2019", [rifiutiCode.CAR]);
-calendar.set("08/03/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("11/03/2019", [rifiutiCode.ORG]);
-calendar.set("14/03/2019", [rifiutiCode.CAR]);
-calendar.set("15/03/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("18/03/2019", [rifiutiCode.ORG]);
-calendar.set("20/03/2019", [rifiutiCode.VL]);
-calendar.set("21/03/2019", [rifiutiCode.CAR]);
-calendar.set("22/03/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("25/03/2019", [rifiutiCode.ORG]);
-calendar.set("28/03/2019", [rifiutiCode.CAR]);
-calendar.set("29/03/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
+    "01/03/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "04/03/2019" : [rifiutiCode.ORG],
+    "05/03/2019" : [rifiutiCode.IND],
+    "06/03/2019" : [rifiutiCode.VL],
+    "07/03/2019" : [rifiutiCode.CAR],
+    "08/03/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "11/03/2019" : [rifiutiCode.ORG],
+    "14/03/2019" : [rifiutiCode.CAR],
+    "15/03/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "18/03/2019" : [rifiutiCode.ORG],
+    "20/03/2019" : [rifiutiCode.VL],
+    "21/03/2019" : [rifiutiCode.CAR],
+    "22/03/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "25/03/2019" : [rifiutiCode.ORG],
+    "28/03/2019" : [rifiutiCode.CAR],
+    "29/03/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
 
-/* APRILE */
+    /* APRILE */
 
-calendar.set("01/04/2019", [rifiutiCode.ORG]);
-calendar.set("02/04/2019", [rifiutiCode.IND]);
-calendar.set("03/04/2019", [rifiutiCode.VL]);
-calendar.set("04/04/2019", [rifiutiCode.CAR]);
-calendar.set("05/04/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("08/04/2019", [rifiutiCode.ORG]);
-calendar.set("11/04/2019", [rifiutiCode.CAR]);
-calendar.set("12/04/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("15/04/2019", [rifiutiCode.ORG]);
-calendar.set("17/04/2019", [rifiutiCode.VL]);
-calendar.set("18/04/2019", [rifiutiCode.CAR]);
-calendar.set("19/04/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("23/04/2019", [rifiutiCode.ORG]);
-calendar.set("24/04/2019", [rifiutiCode.CAR]);
-calendar.set("26/04/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("29/04/2019", [rifiutiCode.ORG]);
-calendar.set("30/04/2019", [rifiutiCode.VL]);
+    "01/04/2019" : [rifiutiCode.ORG],
+    "02/04/2019" : [rifiutiCode.IND],
+    "03/04/2019" : [rifiutiCode.VL],
+    "04/04/2019" : [rifiutiCode.CAR],
+    "05/04/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "08/04/2019" : [rifiutiCode.ORG],
+    "11/04/2019" : [rifiutiCode.CAR],
+    "12/04/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "15/04/2019" : [rifiutiCode.ORG],
+    "17/04/2019" : [rifiutiCode.VL],
+    "18/04/2019" : [rifiutiCode.CAR],
+    "19/04/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "23/04/2019" : [rifiutiCode.ORG],
+    "24/04/2019" : [rifiutiCode.CAR],
+    "26/04/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "29/04/2019" : [rifiutiCode.ORG],
+    "30/04/2019" : [rifiutiCode.VL],
 
-/* MAGGIO */
+    /* MAGGIO */
 
-calendar.set("02/05/2019", [rifiutiCode.CAR]);
-calendar.set("03/05/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("06/05/2019", [rifiutiCode.ORG]);
-calendar.set("07/05/2019", [rifiutiCode.IND]);
-calendar.set("09/05/2019", [rifiutiCode.CAR]);
-calendar.set("10/05/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("13/05/2019", [rifiutiCode.ORG]);
-calendar.set("15/05/2019", [rifiutiCode.VL]);
-calendar.set("16/05/2019", [rifiutiCode.CAR]);
-calendar.set("17/05/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("20/05/2019", [rifiutiCode.ORG]);
-calendar.set("23/05/2019", [rifiutiCode.CAR]);
-calendar.set("24/05/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("27/05/2019", [rifiutiCode.ORG]);
-calendar.set("29/05/2019", [rifiutiCode.VL]);
-calendar.set("30/05/2019", [rifiutiCode.CAR]);
-calendar.set("31/05/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
+    "02/05/2019" : [rifiutiCode.CAR],
+    "03/05/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "06/05/2019" : [rifiutiCode.ORG],
+    "07/05/2019" : [rifiutiCode.IND],
+    "09/05/2019" : [rifiutiCode.CAR],
+    "10/05/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "13/05/2019" : [rifiutiCode.ORG],
+    "15/05/2019" : [rifiutiCode.VL],
+    "16/05/2019" : [rifiutiCode.CAR],
+    "17/05/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "20/05/2019" : [rifiutiCode.ORG],
+    "23/05/2019" : [rifiutiCode.CAR],
+    "24/05/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "27/05/2019" : [rifiutiCode.ORG],
+    "29/05/2019" : [rifiutiCode.VL],
+    "30/05/2019" : [rifiutiCode.CAR],
+    "31/05/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
 
-/* GIUGNO */
+    /* GIUGNO */
 
-calendar.set("03/06/2019", [rifiutiCode.ORG]);
-calendar.set("04/06/2019", [rifiutiCode.IND]);
-calendar.set("06/06/2019", [rifiutiCode.CAR]);
-calendar.set("07/06/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("10/06/2019", [rifiutiCode.ORG]);
-calendar.set("12/06/2019", [rifiutiCode.VL]);
-calendar.set("13/06/2019", [rifiutiCode.CAR]);
-calendar.set("14/06/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("17/06/2019", [rifiutiCode.ORG]);
-calendar.set("20/06/2019", [rifiutiCode.CAR]);
-calendar.set("21/06/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("24/06/2019", [rifiutiCode.ORG]);
-calendar.set("26/06/2019", [rifiutiCode.VL]);
-calendar.set("27/06/2019", [rifiutiCode.CAR]);
-calendar.set("28/06/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
+    "03/06/2019" : [rifiutiCode.ORG],
+    "04/06/2019" : [rifiutiCode.IND],
+    "06/06/2019" : [rifiutiCode.CAR],
+    "07/06/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "10/06/2019" : [rifiutiCode.ORG],
+    "12/06/2019" : [rifiutiCode.VL],
+    "13/06/2019" : [rifiutiCode.CAR],
+    "14/06/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "17/06/2019" : [rifiutiCode.ORG],
+    "20/06/2019" : [rifiutiCode.CAR],
+    "21/06/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "24/06/2019" : [rifiutiCode.ORG],
+    "26/06/2019" : [rifiutiCode.VL],
+    "27/06/2019" : [rifiutiCode.CAR],
+    "28/06/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
 
-/* LUGLIO */
+    /* LUGLIO */
 
-calendar.set("01/07/2019", [rifiutiCode.ORG]);
-calendar.set("02/07/2019", [rifiutiCode.IND]);
-calendar.set("04/07/2019", [rifiutiCode.CAR]);
-calendar.set("05/07/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("08/07/2019", [rifiutiCode.ORG]);
-calendar.set("10/07/2019", [rifiutiCode.VL]);
-calendar.set("11/07/2019", [rifiutiCode.CAR]);
-calendar.set("12/07/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("15/07/2019", [rifiutiCode.ORG]);
-calendar.set("18/07/2019", [rifiutiCode.CAR]);
-calendar.set("19/07/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("22/07/2019", [rifiutiCode.ORG]);
-calendar.set("24/07/2019", [rifiutiCode.VL]);
-calendar.set("25/07/2019", [rifiutiCode.CAR]);
-calendar.set("26/07/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("29/07/2019", [rifiutiCode.ORG]);
+    "01/07/2019" : [rifiutiCode.ORG],
+    "02/07/2019" : [rifiutiCode.IND],
+    "04/07/2019" : [rifiutiCode.CAR],
+    "05/07/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "08/07/2019" : [rifiutiCode.ORG],
+    "10/07/2019" : [rifiutiCode.VL],
+    "11/07/2019" : [rifiutiCode.CAR],
+    "12/07/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "15/07/2019" : [rifiutiCode.ORG],
+    "18/07/2019" : [rifiutiCode.CAR],
+    "19/07/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "22/07/2019" : [rifiutiCode.ORG],
+    "24/07/2019" : [rifiutiCode.VL],
+    "25/07/2019" : [rifiutiCode.CAR],
+    "26/07/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "29/07/2019" : [rifiutiCode.ORG],
 
-/* AGOSTO */
+    /* AGOSTO */
 
-calendar.set("01/08/2019", [rifiutiCode.CAR]);
-calendar.set("02/08/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("05/08/2019", [rifiutiCode.ORG]);
-calendar.set("06/08/2019", [rifiutiCode.IND]);
-calendar.set("07/08/2019", [rifiutiCode.VL]);
-calendar.set("08/08/2019", [rifiutiCode.CAR]);
-calendar.set("09/08/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("12/08/2019", [rifiutiCode.ORG]);
-calendar.set("14/08/2019", [rifiutiCode.CAR]);
-calendar.set("16/08/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("19/08/2019", [rifiutiCode.ORG]);
-calendar.set("21/08/2019", [rifiutiCode.VL]);
-calendar.set("22/08/2019", [rifiutiCode.CAR]);
-calendar.set("23/08/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("26/08/2019", [rifiutiCode.ORG]);
-calendar.set("29/08/2019", [rifiutiCode.CAR]);
-calendar.set("30/08/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
+    "01/08/2019" : [rifiutiCode.CAR],
+    "02/08/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "05/08/2019" : [rifiutiCode.ORG],
+    "06/08/2019" : [rifiutiCode.IND],
+    "07/08/2019" : [rifiutiCode.VL],
+    "08/08/2019" : [rifiutiCode.CAR],
+    "09/08/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "12/08/2019" : [rifiutiCode.ORG],
+    "14/08/2019" : [rifiutiCode.CAR],
+    "16/08/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "19/08/2019" : [rifiutiCode.ORG],
+    "21/08/2019" : [rifiutiCode.VL],
+    "22/08/2019" : [rifiutiCode.CAR],
+    "23/08/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "26/08/2019" : [rifiutiCode.ORG],
+    "29/08/2019" : [rifiutiCode.CAR],
+    "30/08/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
 
-/* SETTEMBRE */
+    /* SETTEMBRE */
 
-calendar.set("02/09/2019", [rifiutiCode.ORG]);
-calendar.set("03/09/2019", [rifiutiCode.IND]);
-calendar.set("04/09/2019", [rifiutiCode.VL]);
-calendar.set("05/09/2019", [rifiutiCode.CAR]);
-calendar.set("06/09/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("09/09/2019", [rifiutiCode.ORG]);
-calendar.set("12/09/2019", [rifiutiCode.CAR]);
-calendar.set("13/09/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("16/09/2019", [rifiutiCode.ORG]);
-calendar.set("18/09/2019", [rifiutiCode.VL]);
-calendar.set("19/09/2019", [rifiutiCode.CAR]);
-calendar.set("20/09/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("23/09/2019", [rifiutiCode.ORG]);
-calendar.set("26/09/2019", [rifiutiCode.CAR]);
-calendar.set("27/09/2019", [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG]);
-calendar.set("30/09/2019", [rifiutiCode.ORG]);
+    "02/09/2019" : [rifiutiCode.ORG],
+    "03/09/2019" : [rifiutiCode.IND],
+    "04/09/2019" : [rifiutiCode.VL],
+    "05/09/2019" : [rifiutiCode.CAR],
+    "06/09/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "09/09/2019" : [rifiutiCode.ORG],
+    "12/09/2019" : [rifiutiCode.CAR],
+    "13/09/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "16/09/2019" : [rifiutiCode.ORG],
+    "18/09/2019" : [rifiutiCode.VL],
+    "19/09/2019" : [rifiutiCode.CAR],
+    "20/09/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "23/09/2019" : [rifiutiCode.ORG],
+    "26/09/2019" : [rifiutiCode.CAR],
+    "27/09/2019" : [rifiutiCode.PLA, rifiutiCode.SEC, rifiutiCode.ORG],
+    "30/09/2019" : [rifiutiCode.ORG],
 
-/* OTTOBRE */
+    /* OTTOBRE */
 
-calendar.set("01/10/2019", [rifiutiCode.IND]);
-calendar.set("02/10/2019", [rifiutiCode.VL]);
-calendar.set("03/10/2019", [rifiutiCode.CAR]);
-calendar.set("04/10/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("07/10/2019", [rifiutiCode.ORG]);
-calendar.set("10/10/2019", [rifiutiCode.CAR]);
-calendar.set("11/10/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("14/10/2019", [rifiutiCode.ORG]);
-calendar.set("16/10/2019", [rifiutiCode.VL]);
-calendar.set("17/10/2019", [rifiutiCode.CAR]);
-calendar.set("18/10/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("21/10/2019", [rifiutiCode.ORG]);
-calendar.set("24/10/2019", [rifiutiCode.CAR]);
-calendar.set("25/10/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("28/10/2019", [rifiutiCode.ORG]);
-calendar.set("30/10/2019", [rifiutiCode.VL]);
-calendar.set("31/10/2019", [rifiutiCode.CAR]);
+    "01/10/2019" : [rifiutiCode.IND],
+    "02/10/2019" : [rifiutiCode.VL],
+    "03/10/2019" : [rifiutiCode.CAR],
+    "04/10/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "07/10/2019" : [rifiutiCode.ORG],
+    "10/10/2019" : [rifiutiCode.CAR],
+    "11/10/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "14/10/2019" : [rifiutiCode.ORG],
+    "16/10/2019" : [rifiutiCode.VL],
+    "17/10/2019" : [rifiutiCode.CAR],
+    "18/10/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "21/10/2019" : [rifiutiCode.ORG],
+    "24/10/2019" : [rifiutiCode.CAR],
+    "25/10/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "28/10/2019" : [rifiutiCode.ORG],
+    "30/10/2019" : [rifiutiCode.VL],
+    "31/10/2019" : [rifiutiCode.CAR],
 
-/* NOVEMBRE */
+    /* NOVEMBRE */
 
-calendar.set("02/11/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("04/11/2019", [rifiutiCode.ORG]);
-calendar.set("05/11/2019", [rifiutiCode.IND]);
-calendar.set("07/11/2019", [rifiutiCode.CAR]);
-calendar.set("08/11/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("11/11/2019", [rifiutiCode.ORG]);
-calendar.set("13/11/2019", [rifiutiCode.VL]);
-calendar.set("14/11/2019", [rifiutiCode.CAR]);
-calendar.set("15/11/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("18/11/2019", [rifiutiCode.ORG]);
-calendar.set("21/11/2019", [rifiutiCode.CAR]);
-calendar.set("22/11/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("25/11/2019", [rifiutiCode.ORG]);
-calendar.set("27/11/2019", [rifiutiCode.VL]);
-calendar.set("28/11/2019", [rifiutiCode.CAR]);
-calendar.set("29/11/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
+    "02/11/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "04/11/2019" : [rifiutiCode.ORG],
+    "05/11/2019" : [rifiutiCode.IND],
+    "07/11/2019" : [rifiutiCode.CAR],
+    "08/11/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "11/11/2019" : [rifiutiCode.ORG],
+    "13/11/2019" : [rifiutiCode.VL],
+    "14/11/2019" : [rifiutiCode.CAR],
+    "15/11/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "18/11/2019" : [rifiutiCode.ORG],
+    "21/11/2019" : [rifiutiCode.CAR],
+    "22/11/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "25/11/2019" : [rifiutiCode.ORG],
+    "27/11/2019" : [rifiutiCode.VL],
+    "28/11/2019" : [rifiutiCode.CAR],
+    "29/11/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
 
-/* DICEMBRE */
+    /* DICEMBRE */
 
-calendar.set("02/12/2019", [rifiutiCode.ORG]);
-calendar.set("03/12/2019", [rifiutiCode.IND]);
-calendar.set("05/12/2019", [rifiutiCode.CAR]);
-calendar.set("06/12/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("09/12/2019", [rifiutiCode.ORG]);
-calendar.set("11/12/2019", [rifiutiCode.VL]);
-calendar.set("12/12/2019", [rifiutiCode.CAR]);
-calendar.set("13/12/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("16/12/2019", [rifiutiCode.ORG]);
-calendar.set("19/12/2019", [rifiutiCode.CAR]);
-calendar.set("20/12/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("23/12/2019", [rifiutiCode.ORG]);
-calendar.set("24/12/2019", [rifiutiCode.VL]);
-calendar.set("26/12/2019", [rifiutiCode.CAR]);
-calendar.set("27/12/2019", [rifiutiCode.PLA, rifiutiCode.SEC]);
-calendar.set("30/12/2019", [rifiutiCode.ORG]);
+    "02/12/2019" : [rifiutiCode.ORG],
+    "03/12/2019" : [rifiutiCode.IND],
+    "05/12/2019" : [rifiutiCode.CAR],
+    "06/12/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "09/12/2019" : [rifiutiCode.ORG],
+    "11/12/2019" : [rifiutiCode.VL],
+    "12/12/2019" : [rifiutiCode.CAR],
+    "13/12/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "16/12/2019" : [rifiutiCode.ORG],
+    "19/12/2019" : [rifiutiCode.CAR],
+    "20/12/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "23/12/2019" : [rifiutiCode.ORG],
+    "24/12/2019" : [rifiutiCode.VL],
+    "26/12/2019" : [rifiutiCode.CAR],
+    "27/12/2019" : [rifiutiCode.PLA, rifiutiCode.SEC],
+    "30/12/2019" : [rifiutiCode.ORG],
+});
 
 module.exports = calendar;
