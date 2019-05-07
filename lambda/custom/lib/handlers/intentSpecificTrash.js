@@ -23,7 +23,7 @@ const SpecificTrashHandler = {
                 .getResponse();
         }
         
-        const today = dateMethods.getNowDate();
+        const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
         let indexKey = -1;
         let date = today;
         do {
