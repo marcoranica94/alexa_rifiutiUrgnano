@@ -13,7 +13,7 @@ const SpecificTrashHandler = {
     },
     handle(handlerInput) {
         const slots = handlerInput.requestEnvelope.request.intent.slots;
-        trashSlot = slots['SlotTrash'] || "";
+        const trashSlot = slots['SlotTrash'] || "";
         const idTrash = trashSlot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
 
         if(trashSlot === "" || idTrash === undefined){
@@ -22,14 +22,14 @@ const SpecificTrashHandler = {
                 .withShouldEndSession(false)
                 .getResponse();
         }
-        
+
         const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
         let indexKey = -1;
         let date = today;
         do {
             indexKey = genericMethods.findIndexFromMap(calendar, date);
             date = dateMethods.addDaysFromDate(date, 1);
-        } while (indexKey < 0)
+        } while (indexKey < 0);
 
         const sliceMap = genericMethods.getSliceMap(calendar, indexKey);
         const dateAndCodeTrash = trashMethods.findTrashAndDateFromSpecific(sliceMap, idTrash);
@@ -40,11 +40,18 @@ const SpecificTrashHandler = {
                 .withShouldEndSession(false)
                 .getResponse();
         }
-        const listCodeTrashWithoutTrashSlot = dateAndCodeTrash[1].filter(x => x !== idTrash)
-        const listTrash = trashMethods.getListOfTrash(listCodeTrashWithoutTrashSlot);
+
         const dateSpeech = dateMethods.getFormatForSpeech(dateAndCodeTrash[0]);
         let speech = message.SPECIFIC_TRASH(rifiutiCodeDetails[idTrash], dateSpeech);
+        const listCodeTrashWithoutTrashSlot = dateAndCodeTrash[1].filter(x => x !== idTrash);
+        if(listCodeTrashWithoutTrashSlot.length === 0) {
+            return handlerInput.responseBuilder
+                .speak(speech)
+                .withShouldEndSession(false)
+                .getResponse();
+        }
 
+        const listTrash = trashMethods.getListOfTrash(listCodeTrashWithoutTrashSlot);
         if(listTrash.size !== '') {
             speech = speech + ' insieme a : ' + listTrash;
         }
