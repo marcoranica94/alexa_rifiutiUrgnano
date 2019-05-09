@@ -10,5 +10,9 @@ const trashMethods = {
           }, "");
     },
 
+    findTrashAndDateFromSpecific(map, idTrash){
+        return map.findEntry( value => value.includes(idTrash));
+    }
+
 }
 module.exports = trashMethods;

@@ -27,9 +27,73 @@
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
+        },
+        {
+          "name": "SpecificTrashIntent",
+          "slots": [
+              {
+                  "name": "SlotTrash",
+                  "type": "Slot_Trash"
+              }
+          ],
+          "samples": [
+              "quando il {SlotTrash}",
+              "quando devo portare il {SlotTrash}"
+          ]
         }
       ],
-      "types": []
+      "types": [
+        {
+          "name": "Slot_Trash",
+          "values": [
+            {
+              "id": "IND",
+              "name": {
+                "value": "Indumenti usati",
+                "synonyms": [
+                    "indumenti",
+                    "vestiti"
+                ]
+              }
+            },
+            {
+              "id": "VL",
+              "name": {
+                "value": "Vetro e Lattine",
+                "synonyms": [
+                    "barattoli",
+                    "lattine",
+                    "vetro"
+                ]
+              }
+            },
+            {
+              "id": "PLA",
+              "name": {
+                  "value": "Plastica"
+              }
+            },
+            {
+              "id": "CAR",
+              "name": {
+                  "value": "Carta"
+              }
+            },
+            {
+              "id": "ORG",
+              "name": {
+                  "value": "Organico"
+              }
+            },
+            {
+              "id": "SEC",
+              "name": {
+                  "value": "Secco"
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "version": "3"
