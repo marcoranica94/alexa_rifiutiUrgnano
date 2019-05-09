@@ -1,11 +1,11 @@
 const messages = require('./../constants/messages');
 const dateMethods = require('./../method/dateMethods');
 const trashMethods = require('./../method/trashMethods');
-const genericMethods = require('./../method/genericMethods');
+const common = require('../method/common');
 
 const InvocationHandler = {
     canHandle(handlerInput) {
-        return genericMethods.checkRequestType(handlerInput, 'LaunchRequest');
+        return common.checkRequestType(handlerInput, 'LaunchRequest');
     },
     handle(handlerInput) {
         const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
@@ -19,7 +19,7 @@ const InvocationHandler = {
             const trashToSpeech = trashMethods.getListOfTrash(listCodesTrash);
             SPEECH = messages.RIFIUTI + dateToSpeech + " sono: " + trashToSpeech + ". " + messages.MORE_INFO;
         }
-        return genericMethods.speak(handlerInput, SPEECH);
+        return common.speak(handlerInput, SPEECH);
     },
 };
 

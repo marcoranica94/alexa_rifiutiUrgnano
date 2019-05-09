@@ -1,13 +1,13 @@
 const message = require('./../constants/messages');
-const genericMethods = require('./../method/genericMethods');
+const common = require('../method/common');
 
 const ExitHandler = {
     canHandle(handlerInput) {
-        return genericMethods.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.CancelIntent')
-            && genericMethods.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.StopIntent');
+        return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.CancelIntent')
+            && common.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        return genericMethods.speak(handlerInput, message.STOP, true);
+        return common.speak(handlerInput, message.STOP, true);
     },
 };
 

@@ -1,11 +1,11 @@
-const genericMethods = require('./../method/genericMethods');
+const common = require('../method/common');
 
 const HelpHandler = {
     canHandle(handlerInput) {
-        return genericMethods.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.HelpIntent');
+        return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.HelpIntent');
     },
     handle(handlerInput) {
-        return genericMethods.speakAndReprompt(handlerInput, "DA DEFINIRE", "DA DEFINIRE");
+        return common.speakAndReprompt(handlerInput, "DA DEFINIRE", "DA DEFINIRE");
     },
 };
 

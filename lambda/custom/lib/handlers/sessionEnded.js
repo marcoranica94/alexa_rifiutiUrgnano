@@ -1,8 +1,8 @@
-const genericMethods = require('./../method/genericMethods');
+const common = require('../method/common');
 
 const SessionEndedHandler = {
     canHandle(handlerInput) {
-        return genericMethods.checkRequestType(handlerInput, 'SessionEndedRequest');
+        return common.checkRequestType(handlerInput, 'SessionEndedRequest');
 
         const request = handlerInput.requestEnvelope.request;
         return request.type === 'SessionEndedRequest';

@@ -1,5 +1,5 @@
 const message = require('./../constants/messages');
-const genericMethods = require('./../method/genericMethods');
+const common = require('../method/common');
 
 const ErrorHandler = {
     canHandle() {
@@ -7,7 +7,7 @@ const ErrorHandler = {
     },
     handle(handlerInput, error) {
         console.log(`Error handled: ${error.message}`);
-        return genericMethods.speak(handlerInput, message.ERROR);
+        return common.speak(handlerInput, message.ERROR);
     },
 };
 

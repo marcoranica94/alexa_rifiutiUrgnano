@@ -1,4 +1,4 @@
-const genericMethods = {
+const common = {
     findIndexFromMap(map, keyToFind) {
         return map.keySeq().findIndex((key) => key === keyToFind);
     },
@@ -38,4 +38,4 @@ const genericMethods = {
 
 };
 
-module.exports = genericMethods;
+module.exports = common;
