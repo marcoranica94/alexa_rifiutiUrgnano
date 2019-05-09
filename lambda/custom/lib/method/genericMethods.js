@@ -5,7 +5,14 @@ const genericMethods = {
 
     getSliceMap(map, indexToSlice) {
         return map.slice(indexToSlice);
+    },
+
+    getSpeechAlexa(handlerInput, message, shouldEndSession = false) {
+        return handlerInput.responseBuilder
+            .speak(message)
+            .withShouldEndSession(shouldEndSession)
+            .getResponse();
     }
-}
+};
 
 module.exports = genericMethods;
