@@ -5,6 +5,6 @@ const rifiutiCode = {
     PLA : 'PLA',
     VL : 'VL',
     IND : 'IND',
-}
+};
 
 module.exports = rifiutiCode;

@@ -1,8 +1,9 @@
 const common = require('../method/common');
+const intents = require('../constants/intents');
 
 const SessionEndedHandler = {
     canHandle(handlerInput) {
-        return common.checkRequestType(handlerInput, 'SessionEndedRequest');
+        return common.checkRequestType(handlerInput, intents.SESSION_END);
 
         const request = handlerInput.requestEnvelope.request;
         return request.type === 'SessionEndedRequest';

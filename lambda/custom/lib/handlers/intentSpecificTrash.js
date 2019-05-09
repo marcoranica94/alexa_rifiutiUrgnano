@@ -4,10 +4,11 @@ const dateMethods = require('./../method/dateMethods');
 const common = require('../method/common');
 const trashMethods = require('./../method/trashMethods');
 const rifiutiCodeDetails = require('../constants/rifiutiCodeDetails');
+const intents = require('../constants/intents');
 
 const SpecificTrashHandler = {
     canHandle(handlerInput) {
-		return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'SpecificTrashIntent');
+		return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.INT_SPECIFIC);
     },
     handle(handlerInput) {
         const slots = handlerInput.requestEnvelope.request.intent.slots;

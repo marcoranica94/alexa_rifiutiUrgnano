@@ -2,10 +2,11 @@ const messages = require('./../constants/messages');
 const dateMethods = require('./../method/dateMethods');
 const trashMethods = require('./../method/trashMethods');
 const common = require('../method/common');
+const intents = require('../constants/intents');
 
 const InvocationHandler = {
     canHandle(handlerInput) {
-        return common.checkRequestType(handlerInput, 'LaunchRequest');
+        return common.checkRequestType(handlerInput, intents.INVOCATION);
     },
     handle(handlerInput) {
         const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
