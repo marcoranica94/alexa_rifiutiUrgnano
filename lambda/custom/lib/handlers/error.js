@@ -7,7 +7,7 @@ const ErrorHandler = {
     },
     handle(handlerInput, error) {
         console.log(`Error handled: ${error.message}`);
-        return genericMethods.getSpeechAlexa(handlerInput, message.ERROR);
+        return genericMethods.speak(handlerInput, message.ERROR);
     },
 };
 

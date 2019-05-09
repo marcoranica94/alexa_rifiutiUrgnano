@@ -5,7 +5,7 @@ const HelpHandler = {
         return genericMethods.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.HelpIntent');
     },
     handle(handlerInput) {
-        return genericMethods.getSpeechRepromptAlexa(handlerInput, "DA DEFINIRE", "DA DEFINIRE");
+        return genericMethods.speakAndReprompt(handlerInput, "DA DEFINIRE", "DA DEFINIRE");
     },
 };
 

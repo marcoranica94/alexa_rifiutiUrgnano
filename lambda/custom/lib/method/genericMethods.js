@@ -7,14 +7,14 @@ const genericMethods = {
         return map.slice(indexToSlice);
     },
 
-    getSpeechAlexa(handlerInput, message, shouldEndSession = false) {
+    speak(handlerInput, message, shouldEndSession = false) {
         return handlerInput.responseBuilder
             .speak(message)
             .withShouldEndSession(shouldEndSession)
             .getResponse();
     },
 
-    getSpeechRepromptAlexa(handlerInput, message, reprompt, shouldEndSession = false) {
+    speakAndReprompt(handlerInput, message, reprompt, shouldEndSession = false) {
         return handlerInput.responseBuilder
             .speak(message)
             .reprompt(reprompt)

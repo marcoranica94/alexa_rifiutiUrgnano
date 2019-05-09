@@ -15,12 +15,12 @@ const SpecificTrashHandler = {
         const valuesTrashSlot = trashSlot.resolutions.resolutionsPerAuthority[0].values || "";
 
         if(trashSlot === "" || valuesTrashSlot === ""){
-            return genericMethods.getSpeechAlexa(handlerInput, message.UNKNOWN_TRASH);
+            return genericMethods.speak(handlerInput, message.UNKNOWN_TRASH);
         }
 
         const idTrash = trashSlot.resolutions.resolutionsPerAuthority[0].values[0].value.id;
         if(idTrash === undefined){
-            return genericMethods.getSpeechAlexa(handlerInput, message.UNKNOWN_TRASH);
+            return genericMethods.speak(handlerInput, message.UNKNOWN_TRASH);
         }
 
         const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
@@ -35,21 +35,21 @@ const SpecificTrashHandler = {
         const dateAndCodeTrash = trashMethods.findTrashAndDateFromSpecific(sliceMap, idTrash);
 
         if(dateAndCodeTrash === undefined) {
-            return genericMethods.getSpeechAlexa(handlerInput, message.NO_RIFIUTI_YEAR);
+            return genericMethods.speak(handlerInput, message.NO_RIFIUTI_YEAR);
         }
 
         const dateSpeech = dateMethods.getFormatForSpeech(dateAndCodeTrash[0]);
         let speech = message.SPECIFIC_TRASH(rifiutiCodeDetails[idTrash], dateSpeech);
         const listCodeTrashWithoutTrashSlot = dateAndCodeTrash[1].filter(x => x !== idTrash);
         if(listCodeTrashWithoutTrashSlot.length === 0) {
-            return genericMethods.getSpeechAlexa(handlerInput, speech);
+            return genericMethods.speak(handlerInput, speech);
         }
 
         const listTrash = trashMethods.getListOfTrash(listCodeTrashWithoutTrashSlot);
         if(listTrash.size !== '') {
             speech = speech + ' insieme a : ' + listTrash;
         }
-        return genericMethods.getSpeechAlexa(handlerInput, speech);
+        return genericMethods.speak(handlerInput, speech);
     },
 };
 

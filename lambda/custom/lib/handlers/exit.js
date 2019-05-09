@@ -7,7 +7,7 @@ const ExitHandler = {
             && genericMethods.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        return genericMethods.getSpeechAlexa(handlerInput, message.STOP, true);
+        return genericMethods.speak(handlerInput, message.STOP, true);
     },
 };
 

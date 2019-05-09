@@ -19,7 +19,7 @@ const InvocationHandler = {
             const trashToSpeech = trashMethods.getListOfTrash(listCodesTrash);
             SPEECH = messages.RIFIUTI + dateToSpeech + " sono: " + trashToSpeech + ". " + messages.MORE_INFO;
         }
-        return genericMethods.getSpeechAlexa(handlerInput, SPEECH);
+        return genericMethods.speak(handlerInput, SPEECH);
     },
 };
 
