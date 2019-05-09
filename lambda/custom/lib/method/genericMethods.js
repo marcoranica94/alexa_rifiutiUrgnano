@@ -12,7 +12,16 @@ const genericMethods = {
             .speak(message)
             .withShouldEndSession(shouldEndSession)
             .getResponse();
+    },
+
+    getSpeechRepromptAlexa(handlerInput, message, reprompt, shouldEndSession = false) {
+        return handlerInput.responseBuilder
+            .speak(message)
+            .reprompt(reprompt)
+            .withShouldEndSession(shouldEndSession)
+            .getResponse();
     }
+
 };
 
 module.exports = genericMethods;

@@ -1,4 +1,5 @@
 const message = require('./../constants/messages');
+const genericMethods = require('./../method/genericMethods');
 
 const ExitHandler = {
     canHandle(handlerInput) {
@@ -8,9 +9,7 @@ const ExitHandler = {
                 || request.intent.name === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        return handlerInput.responseBuilder
-            .speak(message.STOP)
-            .getResponse();
+        return genericMethods.getSpeechAlexa(handlerInput, message.STOP, true);
     },
 };
 
