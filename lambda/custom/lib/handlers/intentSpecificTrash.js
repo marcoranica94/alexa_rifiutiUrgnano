@@ -7,9 +7,7 @@ const rifiutiCodeDetails = require('../constants/rifiutiCodeDetails');
 
 const SpecificTrashHandler = {
     canHandle(handlerInput) {
-        const request = handlerInput.requestEnvelope.request;
-        return request.type === 'IntentRequest'
-            && request.intent.name === 'SpecificTrashIntent';
+		return genericMethods.checkRequestTypeAndName(handlerInput, 'IntentRequest', 'SpecificTrashIntent');
     },
     handle(handlerInput) {
         const slots = handlerInput.requestEnvelope.request.intent.slots;

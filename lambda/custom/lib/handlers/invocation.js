@@ -5,8 +5,7 @@ const genericMethods = require('./../method/genericMethods');
 
 const InvocationHandler = {
     canHandle(handlerInput) {
-        const request = handlerInput.requestEnvelope.request;
-        return request.type === 'LaunchRequest';
+        return genericMethods.checkRequestType(handlerInput, 'LaunchRequest');
     },
     handle(handlerInput) {
         const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
