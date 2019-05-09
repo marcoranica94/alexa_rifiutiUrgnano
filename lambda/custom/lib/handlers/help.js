@@ -1,14 +1,12 @@
+const common = require('../method/common');
+const intents = require('../constants/intents');
+
 const HelpHandler = {
     canHandle(handlerInput) {
-        const request = handlerInput.requestEnvelope.request;
-        return request.type === 'IntentRequest'
-            && request.intent.name === 'AMAZON.HelpIntent';
+        return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.HELP);
     },
     handle(handlerInput) {
-        return handlerInput.responseBuilder
-            .speak("DA DEFINIRE")
-            .reprompt("DA DEFINIRE")
-            .getResponse();
+        return common.speakAndReprompt(handlerInput, "DA DEFINIRE", "DA DEFINIRE");
     },
 };
 

@@ -1,16 +1,14 @@
 const message = require('./../constants/messages');
+const common = require('../method/common');
+const intents = require('../constants/intents');
 
 const ExitHandler = {
     canHandle(handlerInput) {
-        const request = handlerInput.requestEnvelope.request;
-        return request.type === 'IntentRequest'
-            && (request.intent.name === 'AMAZON.CancelIntent'
-                || request.intent.name === 'AMAZON.StopIntent');
+        return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.CANCEL)
+            && common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.STOP);
     },
     handle(handlerInput) {
-        return handlerInput.responseBuilder
-            .speak(message.STOP)
-            .getResponse();
+        return common.speak(handlerInput, message.STOP, true);
     },
 };
 

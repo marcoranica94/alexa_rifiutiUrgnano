@@ -1,4 +1,5 @@
 const message = require('./../constants/messages');
+const common = require('../method/common');
 
 const ErrorHandler = {
     canHandle() {
@@ -6,11 +7,7 @@ const ErrorHandler = {
     },
     handle(handlerInput, error) {
         console.log(`Error handled: ${error.message}`);
-
-        return handlerInput.responseBuilder
-            .speak(message.ERROR)
-            .reprompt('Sorry, an error occurred.')
-            .getResponse();
+        return common.speak(handlerInput, message.ERROR);
     },
 };
 

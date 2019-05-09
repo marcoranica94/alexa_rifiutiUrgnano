@@ -1,14 +1,15 @@
 const messages = require('./../constants/messages');
 const dateMethods = require('./../method/dateMethods');
 const trashMethods = require('./../method/trashMethods');
+const common = require('../method/common');
+const intents = require('../constants/intents');
 
 const InvocationHandler = {
     canHandle(handlerInput) {
-        const request = handlerInput.requestEnvelope.request;
-        return request.type === 'LaunchRequest';
+        return common.checkRequestType(handlerInput, intents.INVOCATION);
     },
     handle(handlerInput) {
-        const today = dateMethods.getNowDate();
+        const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
         const listCodesTrash = dateMethods.getRifiutidelGiorno(today);
         const dateToSpeech = dateMethods.getFormatForSpeech(today);
 
@@ -19,10 +20,7 @@ const InvocationHandler = {
             const trashToSpeech = trashMethods.getListOfTrash(listCodesTrash);
             SPEECH = messages.RIFIUTI + dateToSpeech + " sono: " + trashToSpeech + ". " + messages.MORE_INFO;
         }
-        return handlerInput.responseBuilder
-            .speak(SPEECH)
-            .withShouldEndSession(false)
-            .getResponse();
+        return common.speak(handlerInput, SPEECH);
     },
 };
 
