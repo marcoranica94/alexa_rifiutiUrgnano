@@ -8,7 +8,7 @@ const InvocationHandler = {
         return request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const today = dateMethods.getNowDate();
+        const today = dateMethods.addDaysFromDate(dateMethods.getNowDate(), 1);
         const listCodesTrash = dateMethods.getRifiutidelGiorno(today);
         const dateToSpeech = dateMethods.getFormatForSpeech(today);
 
