@@ -1,6 +1,5 @@
 const AWS = require('aws-sdk');
-const lodash = require('lodash');
-const CONSTANT_AWS = require('./../constants/constantAws');
+const CONSTANT_AWS = require('../constants/constantAws');
 AWS.config.update({region: CONSTANT_AWS.REGION});
 
 let singleton = null;
@@ -26,8 +25,7 @@ class DbHelper {
         return singleton;
     }
 
-    async getItems(product) {
-
+    async getItem(product) {
         var params = {
             TableName: this.prodottoRifiuto,
             Key: {
