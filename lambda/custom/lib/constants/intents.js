@@ -5,6 +5,7 @@ const intents = {
 	INVOCATION : 'LaunchRequest',
 	SESSION_END : 'SessionEndedRequest',
 	INT_SPECIFIC : 'SpecificTrashIntent',
+	INT_INFO_TRASH: 'InfoTrashIntent',
 };
 
 module.exports = intents;
