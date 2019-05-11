@@ -6,7 +6,9 @@ const HelpHandler = {
         return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.HELP);
     },
     handle(handlerInput) {
-        return common.speakAndReprompt(handlerInput, "DA DEFINIRE", "DA DEFINIRE");
+        return common.speakAndReprompt(handlerInput,
+            "Chiedimi quando portare fuori un tipo di rifiuto",
+            "Posso dirti quando potertò fuori il rifiuto");
     },
 };
 
