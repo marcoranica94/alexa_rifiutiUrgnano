@@ -15,12 +15,16 @@ I installed aws-cli from https://developer.amazon.com/it/docs/smapi/quick-start-
 
 ## Skill Architecture
 
-* INVOCATION ***Aprire rifiuti Urgnano***
-Returns the waste that will be collected the next morning
+* INVOCATION 
+    ***Aprire rifiuti Urgnano***
+
+    Returns the waste that will be collected the next morning
 
 * INTENTS
     1. ***quando il {SlotTrash}***
+    
        ***quando devo portare il {SlotTrash}***
+       
        Returns the first collection date of the requested waste
 
 
