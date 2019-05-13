@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk');
+const messages = require('../constants/messages');
 const CONSTANT_AWS = require('../constants/constantAws');
 AWS.config.update({region: CONSTANT_AWS.REGION});
 
@@ -37,7 +38,7 @@ class MailHelper {
 					}
 				},
 				Subject: {
-					Data: 'Nuovo Elemento',
+					Data: messages.EMAIL_TITLE,
 				}
 			},
 			Source: CONSTANT_AWS.MAIL_FROM
