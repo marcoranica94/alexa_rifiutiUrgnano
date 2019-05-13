@@ -35,7 +35,8 @@ class DbHelper {
                 "product": {
                     "S" : product
                 }
-            }
+            },
+            ProjectionExpression: "typeTrash"
         };
 
         try {
