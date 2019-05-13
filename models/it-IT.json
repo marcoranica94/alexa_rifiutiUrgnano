@@ -31,6 +31,18 @@
               "quando il {SlotTrash}",
               "quando devo portare il {SlotTrash}"
           ]
+        },
+        {
+          "name": "InfoTrashIntent",
+          "slots": [
+              {
+                  "name": "Product",
+                  "type": "AMAZON.Food"
+              }
+          ],
+          "samples": [
+              "dove butto {Product}"
+          ]
         }
       ],
       "types": [
