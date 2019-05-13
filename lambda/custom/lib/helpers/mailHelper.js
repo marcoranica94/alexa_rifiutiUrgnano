@@ -25,10 +25,10 @@ class MailHelper {
 		return singleton;
 	}
 
-	async send(toAddresses, message){
+	async send(message){
 		const params = {
 			Destination: {
-				ToAddresses: toAddresses
+				ToAddresses: CONSTANT_AWS.MAIL_TO
 			},
 			Message: {
 				Body: {
@@ -37,16 +37,14 @@ class MailHelper {
 					}
 				},
 				Subject: {
-					Data: CONSTANTS.EMAIL.SUBJECT,
+					Data: 'Nuovo Elemento',
 				}
 			},
-			Source: CONSTANTS.EMAIL.SOURCE // deve essere verificato
+			Source: CONSTANT_AWS.MAIL_FROM
 		};
 
 		try {
-			console.log('Sending email, ', JSON.stringify(params));
 			await this.emailer.sendEmail(params).promise();
-			console.log('Email sent');
 		} catch (e){
 			console.log('Unable to send email =>', JSON.stringify(e));
 			console.log(e);

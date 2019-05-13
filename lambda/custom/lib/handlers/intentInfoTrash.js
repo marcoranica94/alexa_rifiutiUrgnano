@@ -2,8 +2,8 @@ const common = require('../method/common');
 const intents = require('../constants/intents');
 const DbHelper = require('../helpers/dbHelper');
 const MailHelper = require('../helpers/mailHelper');
-const CONSTANT_AWS = require('../constants/constantAws');
 const lodash = require('lodash');
+const message = require('../constants/messages');
 
 const InfoTrashHandler = {
     canHandle(handlerInput) {
@@ -19,12 +19,11 @@ const InfoTrashHandler = {
 
         const item = await DbHelper.get().getItem(productSlot);
         if(lodash.isEmpty(item)) {
-          speech = "Non ho questo prodotto nel mio archivio";  
-          const mailMessage = 'Il prodotto da aggiungere è' + productSlot;      
+          speech = message.UNDERSTAND_PRODUCT;  
           try {
-            await MailHelper.get().send(CONSTANT_AWS.MAIL_TO, mailMessage);
+            await MailHelper.get().send(message.EMAIL_BODY(productSlot));
           } catch(e) {
-            return common.speak(handlerInput, messages.EMAIL_ERROR);
+            return common.speak(handlerInput, message.EMAIL_ERROR);
           }
         } else  {
           const typeTrash = item.typeTrash.S;
