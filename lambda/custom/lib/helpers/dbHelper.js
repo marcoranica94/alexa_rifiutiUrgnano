@@ -1,4 +1,5 @@
 const AWS = require('aws-sdk');
+const lodash = require('lodash');
 const CONSTANT_AWS = require('../constants/constantAws');
 AWS.config.update({region: CONSTANT_AWS.REGION});
 
@@ -6,7 +7,9 @@ let singleton = null;
 
 class DbHelper {
     constructor() {
-        this.docClient = new AWS.DynamoDB.DocumentClient();
+        //this.docClient = new AWS.DynamoDB.DocumentClient();
+        this.docClient = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+
         this.prodottoRifiuto = 'prodotto_rifiuto';
     }
 
@@ -26,20 +29,24 @@ class DbHelper {
     }
 
     async getItem(product) {
-        var params = {
+        const params = {
             TableName: this.prodottoRifiuto,
-            Key: {
-              'prodotto': {S: product}
-            },
-            ProjectionExpression: 'ATTRIBUTE_NAME'
-          };
+            Key: { 
+                "product": {
+                    "S" : product
+                }
+            }
+        };
+
         try {
-            console.log('Getting items, ', JSON.stringify(params));
+            console.log('Getting item, ', JSON.stringify(params));
             const data = await this.docClient.getItem(params).promise();
-            console.log('Got items, ', JSON.stringify(data));
-            return data.Items;
+            console.log('Getting item, ', JSON.stringify(params),  
+                '\n Got item', JSON.stringify(data)
+            );
+            return !lodash.isEmpty(data.Item) ? data.Item: null;
         } catch (e) {
-            console.log('Unable to get items =>', JSON.stringify(e));
+            console.log('Unable to get item =>', JSON.stringify(e));
             throw e;
         }
     }
