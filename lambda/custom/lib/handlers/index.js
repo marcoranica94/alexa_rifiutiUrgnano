@@ -5,6 +5,7 @@ const ErrorHandler = require('./error');
 const SessionEndedHandler = require('./sessionEnded');
 const IntentSpecificTrash = require('./intentSpecificTrash');
 const IntentInfoTrash = require('./intentInfoTrash');
+const IntentFallback = require('./intentFallback');
 
 module.exports = {
     error: [
@@ -17,5 +18,6 @@ module.exports = {
         SessionEndedHandler,
         IntentSpecificTrash,
         IntentInfoTrash,
+        IntentFallback,
     ],
 };

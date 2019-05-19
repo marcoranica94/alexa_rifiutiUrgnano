@@ -43,6 +43,18 @@
           "samples": [
               "dove butto {Product}"
           ]
+        },
+        {
+          "name": "FallbackIntent",
+          "slots": [
+              {
+                  "name": "any",
+                  "type": "AMAZON.Food"
+              }
+          ],
+          "samples": [
+            "{any}"
+          ]
         }
       ],
       "types": [
