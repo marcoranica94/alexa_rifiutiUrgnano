@@ -29,7 +29,9 @@
           ],
           "samples": [
               "quando il {SlotTrash}",
-              "quando devo portare il {SlotTrash}"
+              "quando devo portare il {SlotTrash}",
+              "il prossimo {SlotTrash}",
+              "{SlotTrash}"
           ]
         },
         {
@@ -41,7 +43,11 @@
               }
           ],
           "samples": [
-              "dove butto {Product}"
+              "dove butto {Product}",
+              "dove metto {Product}",
+              "non so dove mettere {Product}",
+              "dove va {Product}",
+              "dove si mette {Product}"
           ]
         },
         {
