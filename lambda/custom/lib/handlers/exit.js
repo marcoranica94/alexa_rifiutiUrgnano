@@ -5,7 +5,7 @@ const intents = require('../constants/intents');
 const ExitHandler = {
     canHandle(handlerInput) {
         return common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.CANCEL)
-            && common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.STOP);
+            || common.checkRequestTypeAndName(handlerInput, 'IntentRequest', intents.STOP);
     },
     handle(handlerInput) {
         return common.speak(handlerInput, message.STOP, true);

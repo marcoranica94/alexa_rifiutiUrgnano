@@ -13,7 +13,13 @@
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
+          "samples": [
+            "stop",
+            "ciao",
+            "ho finito",
+            "grazie",
+            "chiudi"
+          ]
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
