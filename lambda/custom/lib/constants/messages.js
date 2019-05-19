@@ -10,7 +10,8 @@ const messages = {
     EMAIL_ERROR: "Errore nell'invio della mail",
     EMAIL_BODY: productSlot => 'Il prodotto da aggiungere è: ' + productSlot,
     UNDERSTAND_PRODUCT: 'Non ho questo prodotto nel mio archivio. Riprova fra qualche ora! Verrà aggiunto presto',
-    EMAIL_TITLE: 'Alexa Skill RIFIUTI-URGNANO - Nuovo Elemento'
+    EMAIL_TITLE: 'Alexa Skill RIFIUTI-URGNANO - Nuovo Elemento',
+    UNDERSTAND_INTENT: 'non ho capito quello che hai detto! Riprova',
 };
 
 module.exports = messages;
