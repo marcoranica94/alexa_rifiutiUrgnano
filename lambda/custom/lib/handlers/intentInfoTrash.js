@@ -11,11 +11,16 @@ const InfoTrashHandler = {
     },
     async handle(handlerInput) {
         const slots = handlerInput.requestEnvelope.request.intent.slots;
-        const productSlot = slots['Product'].value || "";
+        let productSlot = slots['Product'].value || "";
+        console.log("SLOT:", productSlot);
         let speech = '';
         if (productSlot === '') {
           return common.speak(handlerInput, "Non ho capito il rifiuto");  
         } 
+        var arrayProducts = productSlot.split(" ");
+        if(arrayProducts.length>1) {
+          productSlot = arrayProducts[1];
+        }
 
         const item = await DbHelper.get().getItem(productSlot);
         if(lodash.isEmpty(item)) {
