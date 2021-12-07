@@ -40,7 +40,6 @@ class DbHelper {
         };
 
         try {
-            console.log('Getting item, ', JSON.stringify(params));
             const data = await this.docClient.getItem(params).promise();
             console.log('Getting item, ', JSON.stringify(params),  
                 '\n Got item', JSON.stringify(data)
