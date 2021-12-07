@@ -12,7 +12,6 @@ const InfoTrashHandler = {
     async handle(handlerInput) {
         const slots = handlerInput.requestEnvelope.request.intent.slots;
         let productSlot = slots['Product'].value || "";
-        console.log("SLOT:", productSlot);
         let speech = '';
         if (productSlot === '') {
           return common.speak(handlerInput, "Non ho capito il rifiuto");  
